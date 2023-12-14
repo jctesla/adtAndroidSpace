@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+  <item
+        android:id="@+id/configurar"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/configurar"/>
+ 
+  
+   <item
+        android:id="@+id/above"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/above"/>
+   
+   <item
+        android:id="@+id/debug"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/debug"/>
+   
+
+</menu>

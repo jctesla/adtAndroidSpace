@@ -1,0 +1,18 @@
+VITACORA DEL TELF DE YAMILO:21/06/2023
+LOG cod: 280 Yamilo|# 465 BATT y SIGNAL = batt= 86 / signal=85dBm / Tefl=Colagdo From:+51915189781 21-6-2023 6:45:48
+# 480 GPSLocListenerERR - LocationUpdate NETWORK: java.lang.RuntimeException: Can't create handler inside thread Thread[Thread-4,5,main] that has not called Looper.prepare()
+# 480 Service ...No Hay LOCALIZACION... GPS 21-6-2023 6:46:3
+# 496 Modulo GPS = TRUE 21-6-2023 6:46:20
+# 496 BATT y SIGNAL = batt= 86 / signal=85dBm / Tefl=Colagdo From:+51915189781 21-6-2023 6:46:20
+# 500 GPSLocListenerERR - LocationUpdate NETWORK: java.lang.RuntimeException: Can't create handler inside thread Thread[Thread-4,5,main] that has not called Looper.prepare()
+# 500 Service ...No Hay LOCALIZACION... GPS 21-6-2023 6:46:24
+# 520 GPSLocListenerERR - LocationUpdate NETWORK: java.lang.RuntimeException: Can't create handler inside thread Thread[Thread-4,5,main] that has not called Looper.prepare()
+# 520 Service ...No Hay LOCALIZACION... GPS 21-6-2023 6:46:44
+# 527 Modulo GPS = TRUE 21-6-2023 6:46:52
+# 527 BATT y SIGNAL = batt= 86 / signal=85dBm / Tefl=Colagdo From:+51915189781 21-6-2023 6:46:52
+# 540 GPSLocListenerERR - LocationUpdate NETWORK: java.lang.RuntimeException: Can't create handler inside thread Thread[Thread-4,5,main] that has not called Looper.prepare()
+# 540 Service ...No Hay LOCALIZACION... GPS 21-6-2023 6:47:5
+# 549 Service comando RQST ALL LOG SCREEN  From:+51915189781
+# 549 Service from Config Tracking = 800 21-6-2023 6:47:15
+# 549 Service Using the same Instance running -setThrdGPS()-  Trcking =800
+# 550 Service Request all LOG Command  21-6-2023 6:47:15

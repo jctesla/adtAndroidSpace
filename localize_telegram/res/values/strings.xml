@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+    <string name="app_name">localize_Telegram</string>
+    <string name="hello_world">Hello Localize Telegram!</string>
+    <string name="action_settings">Settings</string>
+    <string name="intent_received_string">..LLego una Notificacion!</string>
+    
+    
+    <!-- VALI GVCO -->
+     <!--<string name="app_name">   Sistema Vali G-VCO</string>-->
+    <!--<string name="hello_world">Hello world!</string>-->
+    
+     <!-- OPCIONES DE MENU OPTION -->
+     <string name="enviarPost">enviaPost</string>
+    <string name="enviar">Enviar Datos</string>
+    <string name="guardar">Guardar Datos</string>
+    <string name="leer">Leer Padron</string>
+    <string name="configurar">Configurar</string>
+    <string name="above">Above</string>
+    <string name="debug">Debug</string>
+    <string name="salir">---</string>
+    <string name="close">cerrar</string>
+    
+      <!-- CONTEXTO CONFIGURACION -->
+    <string name="title_activity_configuracion">Configuracion</string>
+    <string name="title_activity_rqst_inspector">RqstInspector</string>
+    <string name="title_activity_calltlf_activity">CallTelef Activity</string>
+
+</resources>
+

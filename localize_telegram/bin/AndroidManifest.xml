@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.localize_telegram"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    
+    <uses-permission  android:name="android.permission.ACCESS_GPS" />
+   	<uses-permission  android:name="android.permission.ACCESS_ASSISTED_GPS" />
+   	<uses-permission  android:name="android.permission.ACCESS_CELL_ID" />
+   	<uses-permission  android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+   	
+   	
+   	<!-- this permission let me get the Latotude & Longitude if my near NerborgHood site -->   	
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- > <uses-feature android:name="android.hardware.usb.host"   android:required="true"/> -->
+    
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Apartir del Android 10 es necesario para terminar un llamada de telf -->
+    <!-- <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />  -->
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.PREVENT_POWER_KEY" />
+    
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    
+    <!-- Este Permiso pnos da la posibilidad q en los eipos con Android 10 en adelante puedan
+    levantar un activity desde un Service Class o desde un BroadCast receiver (SMS) -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:supportsRtl="true"
+        >
+        <activity
+            android:excludeFromRecents="true"
+            android:name="com.example.localize_telegram.Localize_main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+        
+        <!-- By setting android:exported="false", you ensure that the Service is only 
+        accessible within your application and cannot be started by other components 
+        outside your app.Declaramos un SERVICIO -->
+        <!-- android:exported="false"  -->
+		<service
+		      android:name="com.example.localize_telegram.Service_GPS"
+		      android:enabled= "true"
+		      android:exported="true">
+		</service>
+		        
+		        
+		<activity
+		       android:name="com.example.localize_telegram.LogConfig"
+		       android:screenOrientation="portrait"
+		       android:label="@string/title_activity_configuracion" >
+		</activity>
+		 
+		        
+		<activity
+		        android:name="com.example.localize_telegram.Configuracion"
+		        android:screenOrientation="portrait"
+		        android:label="@string/title_activity_configuracion" >
+		</activity>
+		 
+		 
+		<activity
+		        android:name="com.example.localize_telegram.callTlf_Activity"
+		        android:screenOrientation="portrait"
+		        android:label="@string/title_activity_calltlf_activity" 
+		        android:launchMode="singleTop">
+		</activity>
+		               
+		 
+		<receiver
+			    android:enabled="true"
+			    android:exported="true" 
+			    android:name="com.example.localize_telegram.startMyCurrentLocation"
+			    android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+           					
+			    <intent-filter>
+			        <action android:name="android.intent.action.BOOT_COMPLETED" />
+			        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			        <category android:name="android.intent.category.DEFAULT" />
+			        
+			    </intent-filter>
+		</receiver>
+
+		  
+		<!-- Para que el BroadCas funcione del Receiver SMS, debemos declarar un reciver -->
+		<receiver android:name="com.example.localize_telegram.ReceiveSMS"> 
+	            <intent-filter>
+	                <action android:name="android.intent.action.BOOT_COMPLETED" />
+	                <action android:name= "android.provider.Telephony.SMS_RECEIVED" /> 
+	                <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+		</receiver>
+		        
+		    
+		<!-- Este Para que el BroadCast de si esta o no conectado el Power Supply -->
+		<receiver android:name=".PhoneBattery_RECEIVER">
+	  			<intent-filter>
+  				    <action android:name="android.intent.action.AIRPLANE_MODE"/>
+  				    <action android:name="android.intent.action.BATTERY_LOW"/>
+  				    <action android:name="android.intent.action.BATTERY_OKAY"/>
+  				    <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+    				<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+    				<action android:name="android.intent.action.PHONE_STATE" />
+	  			</intent-filter>
+		</receiver>
+     	 	           
+        
+    </application>
+
+</manifest>

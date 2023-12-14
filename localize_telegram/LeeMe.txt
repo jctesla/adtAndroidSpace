@@ -1,0 +1,31 @@
+Este proyecto, tiene el Objetivo de localizar a las personas desde un Grupo de Telegram:
+- Funcionamiento:
+Al enviar un SMS al usuario q tiene la App  "localizer_telegram", la APP en su mobil se va activar de forma oculta y empezará a Leer
+la Ubicacion Satelital, Nivel de Bateria y Nivel de Señal, Falta el LBS¿?, y estos datos los envia a un Grupo de Telegram Previamente Creado
+que contiene un ID unico, el cual debe estar seteado en la APP previamente.
+
+- Forma de Operar:
+La App contiene 4 modulo importantes (hay un total de 15):
+
+- Service_GPS:
+------------------
+es un tipo de clase tipo "Service Class", es el más importante de todo, tiene funciones sngts:
+ademas de la rutina Thread "setThrdGPS()" , que esta corriendo en un LOOP finito para crear el RTOS de la App, donde converge todo los eventos del
+   - propiedad de BackGround,
+   - lectura del GPS,
+   - Bateria y Señal del Telefono,
+   - envia de Datos al Servidor por HTTP,
+   - recive las ordenes de los comando START, X y STOP,  q permite detener o activar el envio de localizacion.
+
+
+
+- Localizer_telegram:
+-ReceiveSMS:
+-PhoneStat / LevelBattery / GPSLocListener:
+
+
+- Explain Localize_Telegram: 11/06/2023
+--------------------------------------
+* Activity 		  =  Localize_main()
+* Service Class 	  =  Service_GPS()
+* BroadCastReceiver  = ReceiveSMS() / PhoneBattery_RECEIVER()

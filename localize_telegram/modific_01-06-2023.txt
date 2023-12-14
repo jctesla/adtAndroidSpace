@@ -1,0 +1,43 @@
+agregre:  01/06/2023 12:54
+
+*en la rutina de lectira de GPS, agrege
+class Service_GPS
+if (++timeLoopRdGPS >  offLoopRdGPS -1) {
+     .....
+ }else {
+     gpsLoc.setLocFrec(1000,getBaseContext());   	
+gpsLoc.setLocFrec(1500,getBaseContext());
+
+
+
+
+*en la clase, agrege al activar el Activity se disapare el Service_GPS
+Localize_main
+onResume()
+if (isMyServiceRunning(Service_GPS.class) == false) {
+        .... 
+        startService(intentService);
+
+}else{
+
+
+
+
+
+* onStartCommand, agrege Notify;
+configLaunch{
+if (rsltConfig) {
+         habilite : -------------- NOTIFICAITON -----------------------------------------
+
+y habilte en
+while( flgRunning==true ) {
+        miNotify.setContentText(contentText + " (" + cntr + ")");
+         notiManager.notify( MY_NOTIFICATION_ID, miNotify.build() );
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+agregre:  01/06/2023 12:54
+
+* modifique el hilo setThrdGPS a una clase
+*agregue 2 comandos, uno de rsconfig y rqlog
+*hice q el service class se levante desde el activity si esta conectado(bond) o no tabien lo levnata
+*el comando STOP no detiene el service sino solo el hilo "setThrdGPS "

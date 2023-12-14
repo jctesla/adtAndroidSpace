@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Localize_main" >
+
+    <TextView
+        android:id="@+id/lbl_envia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar un Mensaje a Telegram :" />
+
+    <TextView
+        android:id="@+id/lblService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="output service" />
+
+    <TextView
+        android:id="@+id/lblSetData"
+        android:layout_width="match_parent"
+        android:layout_height="431dp"
+        android:lines="40"
+        android:text="Display Service_GPS"
+        android:textSize="8sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnIniciarService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Serv" />
+
+        <Button
+            android:id="@+id/btnTestGetData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test GetData" />
+    </LinearLayout>
+
+</LinearLayout>

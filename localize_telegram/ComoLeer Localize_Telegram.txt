@@ -1,0 +1,31 @@
+1º Cargo el JupyterNotebook:  que apunta al directorio D:\phytonSpace
+Estudiar y el proyecto o dir : D:\phytonSpace\miBasic\A_pyVSCode\sms_msg_chat
+
+2º Analizar y estudiar los conceptos de Services en: 
+D:\adtEclipseSpace\adtAndroidSpace\
+Service_BackGround_00
+Service_BackGround_01
+Service_BackGround_02
+Service_BackGround_03
+
+3º Estudiar finalmente el prj completo 
+D:\adtEclipseSpace\adtAndroidSpace\localize_Telegram\
+12/06/2023  04:02 a.m.            callTlf_Activity.java
+25/05/2023  11:17 p.m.            Configuracion.java		<pantalla de config de la App>
+22/05/2023  08:26 p.m.            Funcion.java
+21/06/2023  06:28 a.m.            GPSLocListener.java		<contiene el acceso al GPS oem>
+15/06/2023  05:09 a.m.            Localize_main.java		<2º file MAIN() que llama a Service_GPS.java>
+01/06/2023  08:43 p.m.            LogConfig.java			<pantalla de login>
+07/06/2023  11:27 p.m.            ManageFile.java		<file q almacena la config local>
+25/05/2023  10:55 a.m.            Multimidia.java			<genera sonidos>
+15/05/2023  01:46 p.m.            OvrTime.java
+12/06/2023  03:50 a.m.            PhoneBattery_RECEIVER.java	<lee el nivel y estados de batt>
+16/06/2023  10:08 a.m.            PhoneState.java		<lee los estadso del tlg colgado, contestar, etc>
+16/05/2023  10:32 a.m.            PopUp_Notification.java		<lanza un activity externo, pop msg de la notificacion>
+15/06/2023  05:12 a.m.            ReceiveSMS.java		<recive los comandos SMS>
+10/12/2023  05:38 p.m.            Service_GPS.java		<1º file MAIN()>
+12/06/2023  07:12 p.m.            startMyCurrentLocation.java	<permite activar el ServiceGPS despues de encender el equipo> 
+
+
+
+

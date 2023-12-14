@@ -1,0 +1,78 @@
+										if (respFromHttp.length() > 0) {
+											
+														String JsonFromHTTP = respFromHttp;
+														Log.i(TAG, "--->Respuesta del Serv HTTP = " + JsonFromHTTP.substring(0,22));				// contiene todo el json bajado y dentro de el esta el mensaje de chat q le han enviado. ver: https://core.telegram.org/bots/api#making-requests
+														
+														//Leemos las keys o Tags q nos Interesa.
+														try {
+												            JSONObject obj = new JSONObject(JsonFromHTTP);												// Le de un JSON
+												            
+													 		//	-------------------------------------------------------------------------------------------------------------
+												            if (obj.has("ok")) {
+				
+																	            	if (obj.getBoolean("ok")) {
+																			            		// Le result del JSON
+																			            		Log.i(TAG, "--->Si Contiene el Elemento 'ok'= " +  String.valueOf(obj.getBoolean("ok")));
+																			            		
+																			            		Object result = obj.get("result");
+																			            		
+																			            		//-------------------------------------------------------------------
+																			            		if (result instanceof JSONArray) {
+																					            			Log.i(TAG, "--->Es un Arreglo de getUpdates");  
+																					            			
+																						            		JSONArray arryResult = obj.getJSONArray("result");
+																						            		String strDisplay = ""; 
+																						            		
+																						            		//--------------------------------------------------------------------
+																						            		for (int itm = 0; itm < arryResult.length(); itm++) {
+																							            			JSONObject objOrd = arryResult.getJSONObject(itm);
+																							            			JSONObject objMsg = objOrd.getJSONObject("message");
+																							            			
+																							            			if (objMsg.has("text")) {
+																							            				
+																							            				Date date = new Date(objMsg.getLong("date"));
+																							            				String pattern = "dd-MM-yyyy HH:mm:ss";
+																							            				SimpleDateFormat sdf = new SimpleDateFormat(pattern, Locale.getDefault());
+																							            				String msgDateTime = sdf.format(date);
+																							            				
+																							            				date = new Date(System.currentTimeMillis());
+																							            				String actDateTime = sdf.format(date);
+																							            				
+																							            				
+																							            				strDisplay = "[" +String.valueOf(itm )+ "] msg= " +  objMsg.getString("text") + "  DateMsg: " + msgDateTime + " / " + actDateTime;
+																							            				/*
+																							            				 String  msgDateTimeMilis = String.valueOf(objMsg.getLong("date"));
+																							            				 String  actDateTimeMillis = String.valueOf(System.currentTimeMillis());
+																							            				 strDisplay = "[" +String.valueOf(itm )+ "] longTimes = " + msgDateTimeMilis + " / " + actDateTimeMillis;
+																							            				 */ 
+																							            				 Log.i(TAG, strDisplay);
+																							            				//setMsgPopUp("[" +String.valueOf(itm )+ "] msg= " +  objMsg.getString("text") + "  Date: " + strDateTime);
+																							            			}
+																						            		}
+																						            		//--------------------------------------------------------------------
+																						            		setMsgPopUp(strDisplay);
+																			            			
+																					            	 }else {
+																					            			Log.i(TAG, "--->Es un Objeto de sendMessages");
+																					            	 }
+																				            		//-------------------------------------------------------------------
+																			            		
+																	            														            		
+																		            }else {
+																		            		Log.i(TAG, "--->Si Contiene el Elemento 'ok'= " + String.valueOf(obj.getBoolean("ok")));
+																		            }
+												            	
+           	
+														            }else {
+														            	Log.i(TAG, "--->NO HAY KEY = ok ");
+														            }
+															 		//	-------------------------------------------------------------------------------------------------------------
+												            
+					
+													        } catch (JSONException e) {
+													            Log.i(TAG, "--->Err Al consultar KEY  e=" + e.toString());
+													        }
+											
+											}else {
+												Log.i(TAG, "--->NO HAY DATOS de RESPUESTA");
+											}

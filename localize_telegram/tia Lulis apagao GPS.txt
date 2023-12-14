@@ -1,0 +1,22 @@
+LOG cod: tiaLourdes|# 640 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:26:49
+# 651 Modulo GPS = FALSE 23-6-2023 10:30:12
+# 651 BATT y SIGNAL = batt= 99 / signal=85dBm / Tefl=Colagdo From: 23-6-2023 10:30:12
+# 660 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:32:41
+# 680 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:38:33
+# 682 Modulo GPS = FALSE 23-6-2023 10:39:53
+# 682 BATT y SIGNAL = batt= 99 / signal=85dBm / Tefl=Colagdo From: 23-6-2023 10:39:53
+# 700 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:42:46
+# 709 PhoneBattery()Service_GPS() are Running NOW
+# 713 Modulo GPS = FALSE 23-6-2023 10:43:42
+# 713 BATT y SIGNAL = batt= 99 / signal=85dBm / Tefl=Levantado From: 23-6-2023 10:43:42
+# 720 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:43:49
+# 740 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:46:20
+# 743 PhoneBattery()Service_GPS() are Running NOW
+# 744 Modulo GPS = FALSE 23-6-2023 10:46:24
+# 744 BATT y SIGNAL = batt= 99 / signal=85dBm / Tefl=Colagdo From: 23-6-2023 10:46:24
+# 760 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:46:40
+# 775 Modulo GPS = FALSE 23-6-2023 10:46:56
+# 775 BATT y SIGNAL = batt= 99 / signal=85dBm / Tefl=Colagdo From: 23-6-2023 10:46:56
+# 780 Service ...No Hay LOCALIZACION... GPS 23-6-2023 10:47:1
+# 793 Service comando RQST ALL LOG SCREEN  From:+51915189781
+# 794 Service Request all LOG Command  23-6-2023 10:49:1

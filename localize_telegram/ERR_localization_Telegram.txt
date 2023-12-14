@@ -1,0 +1,22 @@
+05-16 17:33:17.646: I/Clase Service_GPS _00 :(2244): ERR - LocationUpdate GPS: java.lang.RuntimeException: Can't create handler inside thread that has not called Looper.prepare()  16-5-2023 17:33:17
+
+05-16 17:34:48.798: I/Clase Service_GPS _00 :(2244): 90 16-5-2023 17:34:48
+
+05-16 17:34:48.801: I/Clase Service_GPS _00 :(2244): ...Instancia de GPSLocListener() activa  16-5-2023 17:34:48
+
+05-16 17:34:48.801: I/Clase Service_GPS _00 :(2244): ...Ref LocationManager = OK  16-5-2023 17:34:48
+
+05-16 17:34:48.802: I/Clase Service_GPS _00 :(2244): ...Ref getLastKnownLocation = OK  16-5-2023 17:34:48
+
+05-16 17:34:48.802: I/Clase Service_GPS _00 :(2244):
+...LocationManager ENABLE  16-5-2023 17:34:48
+
+05-16 17:34:48.802: I/Clase Service_GPS _00 :(2244): ERR - LocationUpdate GPS: java.lang.RuntimeException: Can't create handler inside thread that has not called Looper.prepare()  16-5-2023 17:34:48
+
+05-16 17:34:48.802: I/Clase Service_GPS _00 :(2244): ...LocationUpdates:OFF   Err:NO SE PUEDE RE-ACTIVAR  GPS 16-5-2023 17:34:48
+
+
+05-16 22:12:20.095: I/Clase Service_GPS _00 :(2303): ...LocationUpdates:OFF   Err:NO SE PUEDE RE-ACTIVAR  GPS 16-5-2023 22:12:20
+
+
+
